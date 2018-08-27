@@ -1,0 +1,145 @@
+doctype html
+html
+  head
+      title Lets talk about ... d3.js by Nick
+      meta(charset='utf-8')
+      script(src='assets/vendor/slides.js')
+      link(href='styles.css'  rel='stylesheet' type='text/css')
+      link(href='flex.css'  rel='stylesheet' type='text/css')
+      script(src="https://d3js.org/d3.v4.min.js")
+    body
+      section.slides.layout-regular.template-default
+        article
+          h2 Lets Talk about...
+          h1 &nbsp;
+        article
+          h2 Lets Talk about...
+          h1 integration tests
+        article
+          h1 What are we going to talk about?
+        article
+          h2 What are we going to talk about
+          ul
+            li what tools do we need
+            li what is test/kinds of tests
+            li graphql - api connection
+            li what are we going to test
+        article
+          h1 What tools do we need
+        article
+          h2 What tools do we need
+          ul
+            li Github
+            li JavaScript/Node.js/npm/TypeScript
+            li Jest
+        article
+          h2 Github
+            ul
+              li Used to store code, has versioning so working together is not painful (sometimes still painful)
+              li
+                a(href="http://rogerdudler.github.io/git-guide/")
+                  | git cheatsheet / tutorial
+        article
+          h2 JavaScript/Node.js/npm/TypeScript
+          ul
+            li Tests are written in JavaScript(TypeScript)
+            li we are using newest verion including new(ES6/ES2015) features
+            li 
+              a(href="http://rogerdudler.github.io/git-guide/")
+                | Mozilla javascript documentation / articles
+        article
+          h2 Node.js/npm
+          ul
+            li Node.js is a non-browser environment, based on v8 engine (same as in Chrome)
+            li our tests will run in this enviroment
+            li has it's own modules for backend use
+            li 
+                a(href="https://nodejs.org/api/")
+                  | Node.js documentation
+        article
+          h2 Jest
+          ul
+            li npm package for tests running
+            li 
+                a(href="https://jestjs.io/docs/en/getting-started")
+                  | Jest documentation
+        article
+          h2 What is test/kinds of tests
+          ul
+            li sequence of actions followed by assertion
+          pre.h0
+            |it('should add 1 + 2 and get 3', () => {
+            |  const result = 1 + 2;
+            |  expect(result).toBe(3);
+            |});
+        article
+          h2 Kinds of tests
+          ul
+            li Unit testing
+            li Integration testing
+            li System testing
+            li Sanity testing
+            li Smoke testing
+            li Interface testing
+            li Regression testing
+            li Beta/Acceptance testing
+        article
+          h2 Integration testing
+          ul
+            li testing application as a whole thing
+            li for example for browser application this should emulate a user doing stuff on the page
+            li in our case (API testing) we will send requests to our server and will check if response is correct
+        article 
+          h2 Graphql - api connection
+        article.image(data-src="assets/images/api.jpg")
+        article
+          h2 Graphql
+          ul
+            li Defined by a schema
+            li client can send queries(read) and mutations(write)
+            li 
+                a(href="https://graphql.org/learn/")
+                  | Graphql overview/docs
+        article
+          h2 What are we going to test
+          ul
+            li Emulating a client and send query to a graphql server
+            li graphql server will send querires to REST API and generate a response
+            li we will "mock" responses from REST API and provide our own responses
+        article.image(data-src="assets/images/api-mock.jpg")
+        article
+          h2 Test parts
+          ul
+            li REST API mocks
+            li GraphQL Query
+            li Assertions
+        article
+          h2 interactive part
+            li 
+              a(href="http://localhost:8182/")
+                | Graphql overview/docs
+              a(href="https://beta.shyftplan.com/swagger")
+                | REST APIs
+            
+        article
+          h2 That's all for today
+        article
+          h2 Whats next?
+          ul.build
+            li
+              a(href="https://d3js.org/")
+                | Library website
+            li
+              a(href="https://github.com/d3/d3/wiki/Gallery")
+                | Interactive examples!
+            li
+              a(href="https://flowingdata.com/")
+                | Even cooler (interactivER) examples 
+            li
+              a(href="https://healqq.github.io/lets-talk-about---d3")
+                | Slides
+                
+        article.section
+          h1 Questions?
+
+      script(src='assets/scripts/main.js')
